@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="neon-card">
+    <form action="{{ url_for('start') }}" method="post">
+        <button type="submit">Start Work</button>
+    </form>
+    <form action="{{ url_for('end') }}" method="post">
+        <button type="submit">End Work</button>
+    </form>
+    <form action="{{ url_for('break_start') }}" method="post">
+        <button type="submit">Start Break</button>
+    </form>
+    <form action="{{ url_for('break_end') }}" method="post">
+        <button type="submit">End Break</button>
+    </form>
+    <a href="{{ url_for('report') }}">View Report</a>
+</div>
+{% endblock %}

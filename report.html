@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="neon-card">
+    <h2>Report</h2>
+    {% for session in sessions %}
+        <div>
+            <p>Start: {{ session.start }}</p>
+            <p>End: {{ session.end }}</p>
+            <ul>
+                {% for b in session.break %}
+                    <li>Break: {{ b.start }} - {{ b.end }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
